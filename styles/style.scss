@@ -1,0 +1,28 @@
+@import 'utilities';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/background.svg) center no-repeat;
+    @include flexCenter(row);
+}
+
+.container {
+    width: 66rem;
+    height: 36rem;
+    margin: 9rem 0;
+    background: radial-gradient(50% 50% at 50% 50%, #892B50 0%, #7D2648 0%, #5C1D32 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    @include flexCenter(row);
+}
+
+@import 'infoSection';
+@import 'notePanel';
+@import 'calendarSection';
+@import 'mediaQueriesMobile';
+@import 'mediaQueriesDesktop';

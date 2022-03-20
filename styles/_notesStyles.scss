@@ -1,0 +1,91 @@
+.notes-section {
+    grid-row: 3/4;
+    @include flexCenter(row);
+    overflow: hidden;
+
+    .notes-wrapper {
+        width: 80%;
+        height: 85%;
+        background-color: $white25;
+        border-radius: 30px;
+        @include flex(column, initial, flex-start);
+        padding-left: 5%;
+
+        .notes {
+            margin: 9% 0;
+            width: 95%;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+
+            .notes-error {
+                color: $yello;
+                text-align: center;
+                font-size: 1.2em;
+                user-select: none;
+            }
+
+            .note {
+                display: grid;
+                grid-template-columns: 1.6fr 2fr 2fr;
+                grid-template-rows: 90%;
+                column-gap: 5%;
+                border-bottom: 2px solid $white87;
+                width: 92%;
+                margin: 2% 0;
+                font-size: 1em;
+                font-weight: 600;
+                color: $white87;
+            
+                .hour {
+                    background-color: $yello;
+                    color: $bordo;
+                    height: 85%;
+                    border-radius: 16px;
+                    @include flexCenter(row);
+                    align-self: center;
+                    font-size: 1em;
+                    font-weight: 600;
+                    user-select: none;
+                }
+            
+                .name {
+                    display: flex;
+                    align-items: flex-end;
+                }
+                
+                .other {
+                    height: 100%;
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 1fr 1fr;
+                    row-gap: .1rem;
+
+                    .icons {
+                        width: 100%;
+                        @include flex(row, space-around, center);
+                        background-color: $yello;
+                        border-radius: 8px;
+                        user-select: none;
+
+                        img {
+                            padding: .2rem;
+                            height: 60%;
+                            cursor: pointer;
+                            transition: filter .1s ease-in-out;
+                            
+                            &:hover {
+                                filter: brightness(.8);
+                            }
+                        }
+                    }
+
+                    .number {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

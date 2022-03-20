@@ -1,0 +1,23 @@
+
+$white25: RGBA(255,255,255,0.25);
+$white87: RGBA(255,255,255,0.87);
+$yello: #FFDF32;
+$yello70: #ffe032b2;
+$bordo: #892B50;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

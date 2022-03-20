@@ -1,0 +1,99 @@
+.calendar {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 6fr ;
+    row-gap: .8em;
+}
+
+.months {
+    @include flex(row, space-around, center);
+    border-bottom: 2px solid $white87;
+    padding: 0 1rem;
+
+    .month {
+        color: #AFAFAF;
+        font-size: 1em;
+        cursor: pointer;
+        user-select: none;
+
+        &:not(.active):hover {
+            color: $white87;
+        }
+    }
+
+    .active {
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.days {
+    @include flex(column, initial, initial);
+
+    display: grid;
+    grid-template-rows: 15% 85%;
+
+    .day-names {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-items: center;
+        align-items: center;
+        user-select: none;
+
+        .day-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: white;
+
+            &:nth-child(6) {
+                color: #AFAFAF;
+            }
+
+            &:nth-child(7) {
+                color: red;
+            }
+        }
+    }
+
+    .days-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        .day {
+            color:white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform .15s ease-in-out;
+            @include flexCenter(row);
+            height: 70%;
+            aspect-ratio: 1;
+            user-select: none;
+
+            &:not(:is(.today, .active)):hover {
+                transform: scale(1.15);
+            }
+
+        }
+
+        .day.today {
+            color:$bordo;
+            font-weight: 600;
+            background-color: $yello70;
+            border-radius: 50%;
+        }
+
+        .day.active {
+            color:$bordo;
+            font-weight: 500;
+            background-color: $yello;
+            border-radius: 50%;
+        }
+
+        .not {
+            color:  #AFAFAF;
+        }
+    }
+}

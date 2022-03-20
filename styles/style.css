@@ -1,0 +1,986 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/background.svg) center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container {
+  width: 66rem;
+  height: 36rem;
+  margin: 9rem 0;
+  background: radial-gradient(50% 50% at 50% 50%, #892B50 0%, #7D2648 0%, #5C1D32 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.day-info {
+  width: 40%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: .2fr 1fr 1.4fr .2fr .2fr;
+      grid-template-rows: .2fr 1fr 1.4fr .2fr .2fr;
+}
+
+.date-info {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.date-info #day-number {
+  font-size: 10em;
+  font-weight: 800;
+  line-height: 85%;
+}
+
+.date-info #day-of-week {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.date-info #month-name {
+  color: #FFDF32;
+  opacity: 87%;
+  font-size: 1em;
+}
+
+.notes-section {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+.notes-section .notes-wrapper {
+  width: 80%;
+  height: 85%;
+  background-color: RGBA(255, 255, 255, 0.25);
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5%;
+}
+
+.notes-section .notes-wrapper .notes {
+  margin: 9% 0;
+  width: 95%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.notes-section .notes-wrapper .notes .notes-error {
+  color: #FFDF32;
+  text-align: center;
+  font-size: 1.2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.notes-section .notes-wrapper .notes .note {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.6fr 2fr 2fr;
+      grid-template-columns: 1.6fr 2fr 2fr;
+  -ms-grid-rows: 90%;
+      grid-template-rows: 90%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  border-bottom: 2px solid RGBA(255, 255, 255, 0.87);
+  width: 92%;
+  margin: 2% 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: RGBA(255, 255, 255, 0.87);
+}
+
+.notes-section .notes-wrapper .notes .note .hour {
+  background-color: #FFDF32;
+  color: #892B50;
+  height: 85%;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 1em;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.notes-section .notes-wrapper .notes .note .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.notes-section .notes-wrapper .notes .note .other {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  row-gap: .1rem;
+}
+
+.notes-section .notes-wrapper .notes .note .other .icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #FFDF32;
+  border-radius: 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.notes-section .notes-wrapper .notes .note .other .icons img {
+  padding: .2rem;
+  height: 60%;
+  cursor: pointer;
+  -webkit-transition: -webkit-filter .1s ease-in-out;
+  transition: -webkit-filter .1s ease-in-out;
+  transition: filter .1s ease-in-out;
+  transition: filter .1s ease-in-out, -webkit-filter .1s ease-in-out;
+}
+
+.notes-section .notes-wrapper .notes .note .other .icons img:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.notes-section .notes-wrapper .notes .note .other .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-wrapper {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn-wrapper button {
+  height: 100%;
+  padding: 0 1.6em;
+  border-radius: 10px;
+  background-color: #FFDF32;
+  color: #892B50;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.note-panel {
+  z-index: 10;
+  display: none;
+  background-color: #5C1D32;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.note-panel.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.note-panel #cross {
+  position: absolute;
+  right: 6%;
+  top: 6%;
+  cursor: pointer;
+}
+
+.inputs-wrapper {
+  width: 45%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+}
+
+.inputs-wrapper .date {
+  color: white;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.inputs-wrapper .hour-input {
+  background-color: #FFDF32;
+  color: #892B50;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 600;
+  height: 14%;
+  width: 60%;
+  border-radius: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inputs-wrapper .hour-input .datetime-input-edit-wrapper {
+  text-align: right;
+  margin-left: 2%;
+}
+
+.inputs-wrapper .hour-input span {
+  font-size: 2.2em;
+  height: 100%;
+  padding: 5% 2% 0 3%;
+}
+
+.inputs-wrapper p {
+  color: white;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.inputs-wrapper input {
+  background-color: transparent;
+  outline: none;
+}
+
+.inputs-wrapper input:active {
+  outline: none;
+}
+
+.inputs-wrapper input[type=time] {
+  border: none;
+  height: 90%;
+  width: 90%;
+  font-size: 2em;
+  font-weight: 600;
+  color: #892B50;
+  text-align: center;
+}
+
+.inputs-wrapper input[type=time]::-webkit-input-placeholder {
+  color: #892B50;
+}
+
+.inputs-wrapper input[type=time]:-ms-input-placeholder {
+  color: #892B50;
+}
+
+.inputs-wrapper input[type=time]::-ms-input-placeholder {
+  color: #892B50;
+}
+
+.inputs-wrapper input[type=time]::placeholder {
+  color: #892B50;
+}
+
+.inputs-wrapper input[type=time]::-webkit-calendar-picker-indicator {
+  color: #892B50;
+}
+
+.inputs-wrapper input[type=text] {
+  height: 10%;
+  width: 90%;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #FFDF32;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.inputs-wrapper input[type=text]:focus {
+  border-width: 2px;
+}
+
+.inputs-wrapper button {
+  height: 9%;
+  width: 45%;
+  border-radius: 10px;
+  background-color: #FFDF32;
+  color: #892B50;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calendar-wrapper {
+  width: 60%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90%;
+      grid-template-columns: 90%;
+  -ms-grid-rows: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.year-wrapper {
+  font-size: 36px;
+  color: white;
+  padding-right: .6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.year-wrapper .year {
+  font-size: 36px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 25%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.year-wrapper .year img {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .16s ease-in-out;
+  transition: -webkit-transform .16s ease-in-out;
+  transition: transform .16s ease-in-out;
+  transition: transform .16s ease-in-out, -webkit-transform .16s ease-in-out;
+}
+
+.year-wrapper .year img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.calendar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr 6fr;
+      grid-template-rows: 1fr 6fr;
+  row-gap: .8em;
+}
+
+.months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 2px solid RGBA(255, 255, 255, 0.87);
+  padding: 0 1rem;
+}
+
+.months .month {
+  color: #AFAFAF;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.months .month:not(.active):hover {
+  color: RGBA(255, 255, 255, 0.87);
+}
+
+.months .active {
+  color: white;
+  font-weight: 600;
+}
+
+.days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 85%;
+      grid-template-rows: 15% 85%;
+}
+
+.days .day-names {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.days .day-names .day-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+}
+
+.days .day-names .day-name:nth-child(6) {
+  color: #AFAFAF;
+}
+
+.days .day-names .day-name:nth-child(7) {
+  color: red;
+}
+
+.days .days-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.days .days-grid .day {
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .15s ease-in-out;
+  transition: -webkit-transform .15s ease-in-out;
+  transition: transform .15s ease-in-out;
+  transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 70%;
+  aspect-ratio: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.days .days-grid .day:not(:is(.today, .active)):hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.days .days-grid .day.today {
+  color: #892B50;
+  font-weight: 600;
+  background-color: #ffe032b2;
+  border-radius: 50%;
+}
+
+.days .days-grid .day.active {
+  color: #892B50;
+  font-weight: 500;
+  background-color: #FFDF32;
+  border-radius: 50%;
+}
+
+.days .days-grid .not {
+  color: #AFAFAF;
+}
+
+.myCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.myCard img {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  opacity: 87%;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+    border-radius: 0;
+  }
+  .container .day-info {
+    width: 90%;
+    height: 55%;
+    -ms-grid-rows: .2fr 1.4fr 2fr .3fr .2fr;
+        grid-template-rows: .2fr 1.4fr 2fr .3fr .2fr;
+  }
+  .container .calendar-wrapper {
+    width: 90%;
+    height: 45%;
+  }
+  .container .calendar-wrapper .note-panel {
+    border-radius: 0;
+  }
+  .container .calendar-wrapper .calendar .months {
+    padding: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .calendar-wrapper .calendar .months .month {
+    width: 16%;
+    padding: 2px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .date-info {
+    font-size: .8rem;
+  }
+  .notes-section .notes-wrapper {
+    padding-left: 7%;
+    height: 75%;
+    width: 75%;
+  }
+  .notes-section .notes-wrapper .notes {
+    margin: 6% 0;
+    font-size: .7rem;
+  }
+  .calendar-wrapper {
+    width: 98%;
+    -ms-grid-columns: 96%;
+        grid-template-columns: 96%;
+  }
+  .calendar-wrapper .inputs-wrapper {
+    font-size: .7rem;
+    width: 90%;
+  }
+  .calendar-wrapper .inputs-wrapper span {
+    padding-top: 15%;
+  }
+  .calendar-wrapper .year {
+    width: 40%;
+  }
+  .calendar-wrapper .months {
+    font-size: 1rem;
+  }
+  .calendar-wrapper :is(.day-names, .days-grid) {
+    font-size: .8rem;
+  }
+  .calendar-wrapper .myCard img {
+    height: 40%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .date-info {
+    font-size: .8rem;
+  }
+  .notes-section .notes-wrapper {
+    padding-left: 7%;
+    height: 75%;
+    width: 75%;
+  }
+  .notes-section .notes-wrapper .notes {
+    margin: 6% 0;
+    font-size: .7rem;
+  }
+  .calendar-wrapper {
+    width: 98%;
+    -ms-grid-columns: 96%;
+        grid-template-columns: 96%;
+  }
+  .calendar-wrapper .inputs-wrapper {
+    font-size: .75rem;
+    width: 90%;
+  }
+  .calendar-wrapper .inputs-wrapper .hour-input {
+    width: 40%;
+    height: 12%;
+  }
+  .calendar-wrapper .inputs-wrapper span {
+    padding-top: 15%;
+  }
+  .calendar-wrapper .year {
+    width: 35%;
+  }
+  .calendar-wrapper .months {
+    font-size: 1rem;
+  }
+  .calendar-wrapper :is(.day-names, .days-grid) {
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .date-info {
+    font-size: .9rem;
+  }
+  .notes-section .notes-wrapper {
+    padding-left: 7%;
+    height: 75%;
+    width: 75%;
+  }
+  .notes-section .notes-wrapper .notes {
+    margin: 6% 0;
+    font-size: .85rem;
+  }
+  .calendar-wrapper {
+    width: 95%;
+    -ms-grid-columns: 96%;
+        grid-template-columns: 96%;
+  }
+  .calendar-wrapper .inputs-wrapper {
+    font-size: .75rem;
+    width: 90%;
+  }
+  .calendar-wrapper .inputs-wrapper .hour-input {
+    width: 40%;
+    height: 12%;
+  }
+  .calendar-wrapper .inputs-wrapper span {
+    padding-top: 10%;
+  }
+  .calendar-wrapper .year-wrapper .year {
+    width: 25%;
+  }
+  .calendar-wrapper .months {
+    font-size: 1.1rem;
+  }
+  .calendar-wrapper :is(.day-names, .days-grid) {
+    font-size: 1.1rem;
+  }
+  .calendar-wrapper .myCard {
+    height: 70%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .date-info {
+    font-size: 1.2rem;
+  }
+  .notes-section .notes-wrapper {
+    padding-left: 7%;
+    height: 83%;
+    width: 70%;
+  }
+  .notes-section .notes-wrapper .notes {
+    margin: 6% 0;
+    font-size: 1.2rem;
+  }
+  .year-wrapper .year {
+    width: 25%;
+  }
+  .calendar-wrapper .inputs-wrapper {
+    font-size: .9rem;
+    height: 90%;
+    width: 70%;
+  }
+  .calendar-wrapper .inputs-wrapper .hour-input {
+    width: 40%;
+    height: 12%;
+  }
+  .calendar-wrapper .inputs-wrapper span {
+    padding-top: 8%;
+  }
+  .calendar-wrapper .months {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: .6rem;
+    background-color: RGBA(255, 255, 255, 0.25);
+    border-radius: 3rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #892B50;
+    border-radius: 3rem;
+  }
+  .notes {
+    scrollbar-color: #892B50 RGBA(255, 255, 255, 0.25);
+    scrollbar-width: .6rem;
+  }
+  .day-info .btn-wrapper button {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .day-info .btn-wrapper button:hover {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    background-color: #892B50;
+    color: #FFDF32;
+  }
+  :is(.date-info, .notes-section, .btn-wrapper) {
+    border-right: 2px solid RGBA(255, 255, 255, 0.87);
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .day-info {
+    font-size: 0.8rem;
+  }
+  .notes-wrapper {
+    font-size: 0.75rem;
+  }
+  .btn-wrapper button {
+    font-size: .8rem;
+  }
+  .calendar .months {
+    font-size: .9rem;
+    padding: .3rem;
+  }
+  .inputs-wrapper {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .year-wrapper .year {
+    width: 25%;
+  }
+  .inputs-wrapper {
+    font-size: .96rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

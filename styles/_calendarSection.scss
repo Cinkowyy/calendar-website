@@ -1,0 +1,44 @@
+.calendar-wrapper {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 1fr 4fr 1fr;
+    justify-content: center;
+    position: relative;
+}
+
+.year-wrapper {
+    font-size: 36px;
+    color: white;
+    padding-right: .6em;
+    @include flex(row, flex-end, center);
+
+    .year {
+        font-size: 36px;
+        color: white;
+        @include flex(row, space-between, center);
+        width: 25%;
+        user-select: none;
+
+        img {
+            cursor: pointer;
+            transition: transform .16s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@import 'calendarStyles';
+
+.myCard {
+    @include flex(row, flex-end, center);
+
+    img {
+        transform: rotate(-5deg);
+        opacity: 87%;
+    }
+}

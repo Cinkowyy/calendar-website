@@ -1,0 +1,77 @@
+@media only screen and (min-width: 768px) {
+
+    ::-webkit-scrollbar {
+        width: .6rem;
+        background-color: $white25;
+        border-radius: 3rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: $bordo;
+        border-radius: 3rem;
+    }
+
+    .notes {
+        scrollbar-color: $bordo $white25;
+        scrollbar-width: .6rem;
+    }
+
+    .day-info .btn-wrapper {
+        button {
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transform: scale(.98);
+                background-color: $bordo;
+                color: $yello;
+            }
+        }
+    }
+
+    :is(.date-info, .notes-section, .btn-wrapper) {
+        border-right: 2px solid $white87;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    .day-info {
+        font-size: 0.8rem;
+    }
+
+    .notes-wrapper {
+        font-size: 0.75rem;
+    }
+    
+    .btn-wrapper button {
+        font-size: .8rem;
+    }
+
+    .calendar .months {
+        font-size: .9rem;
+        padding: .3rem;
+    }
+
+    .inputs-wrapper {
+        font-size: .9rem;
+    }
+} 
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  
+    .year-wrapper .year {
+        width: 25%;
+    }
+
+    .inputs-wrapper {
+        font-size: .96rem;
+    }
+} 
+
+@media only screen and (min-width: 1200px) and (max-width:1600px) {
+
+}
+
+@media only screen and (min-width: 1600px) {
+    
+}

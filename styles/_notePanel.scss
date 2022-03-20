@@ -1,0 +1,119 @@
+$innerBordo: #5C1D32;
+
+.note-panel {
+    z-index: 10;
+    display: none;
+    background-color: $innerBordo;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+
+    &.active {
+        @include flexCenter(row);
+    }
+
+    #cross {
+        position: absolute;
+        right: 6%;
+        top: 6%;
+        cursor: pointer;
+    }
+}
+
+.inputs-wrapper {
+    width: 45%;
+    height: 70%;
+    @include flex(column, space-around, center);
+    font-size: 1rem;
+
+    .date {
+        color: white;
+        font-size: 1.4em;
+        text-transform: uppercase;
+    }
+
+    .hour-input {
+        background-color: $yello;
+        color: $bordo;
+        box-sizing: border-box;
+        font-weight: 600;
+        height: 14%;
+        width: 60%;
+        border-radius: 18px;
+        @include flexCenter(row);
+
+        .datetime-input-edit-wrapper {
+            text-align: right;
+            margin-left: 2%;
+        }
+
+        span {
+            font-size: 2.2em;
+            height: 100%;
+            padding: 5% 2% 0 3%;
+        }
+    }
+
+    p {
+        color: white;
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    input {
+        background-color: transparent;
+        outline: none;
+
+        &:active {
+            outline: none;
+        }
+    }
+
+    input[type=time] {
+        border: none;
+        height: 90%;
+        width: 90%;
+        font-size: 2em;
+        font-weight: 600;
+        color: $bordo;
+        text-align: center;
+
+        &::placeholder {
+            color: $bordo;
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            color: $bordo;
+        }
+    }
+
+    input[type=text] {
+        height: 10%;
+        width: 90%;
+        border-radius: 8px;
+        box-sizing: border-box;
+        border: 1px solid $yello;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+
+        &:focus {
+            border-width: 2px;
+        }
+    }
+
+    button {
+        height: 9%;
+        width: 45%;
+        border-radius: 10px;
+        background-color: $yello;
+        color: $bordo;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        border:none;
+        user-select: none;
+    }
+}

@@ -1,0 +1,53 @@
+.day-info {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: .2fr 1fr 1.4fr .2fr .2fr;
+}
+
+.date-info {
+    grid-row: 2/3;
+    @include flexCenter(column);
+    color: white;
+    text-transform: uppercase;
+    user-select: none;
+
+    #day-number {
+        font-size: 10em;
+        font-weight: 800;
+        line-height:85%
+    }
+    
+    #day-of-week {
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    
+    #month-name {
+        color: $yello;
+        opacity:87%;
+        font-size: 1em;
+    }
+}
+
+@import 'notesStyles';
+
+.btn-wrapper {
+    grid-row: 4/5;
+    @include flexCenter(column);
+
+    button {
+        height: 100%;
+        padding: 0 1.6em;
+        border-radius: 10px;
+        background-color: $yello;
+        color: $bordo;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        border:none;
+        user-select: none;
+    }
+}

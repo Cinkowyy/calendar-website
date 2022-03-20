@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Calendar by Cinkowyy</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="day-info">
+            <div class="date-info">
+                <div id="day-number"></div>
+                <div id="day-of-week"></div>
+                <div id="month-name"></div>
+            </div>
+
+            <div class="notes-section">
+                <div class="notes-wrapper">
+                    <div class="notes">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrapper">
+                    <button id="addVisit">DODAJ WIZYTĘ</button>
+            </div>
+
+        </div>
+
+        <div class="calendar-wrapper">
+
+            <div class="note-panel">
+                <img src="img/close-icon.svg" alt="close" id="cross">
+
+                <div class="inputs-wrapper">
+                    <div class="date"></div>
+
+                    <div class="hour-input">
+                        <input type="time" id="timeInput">
+                    </div>
+
+                    <p>IMIĘ i NAZWISKO KLIENTA</p>
+                    <input type="text" id='nameInput' >
+                    <p>NUMER TELEFONU</p>
+                    <input type="text" maxlength='9' id='numberInput' >
+
+                    <button id="saveVisit">ZAPISZ</button>
+                </div>
+            </div>
+
+            <div class="year-wrapper">
+                <div class="year">
+                    <img id="prev-year" src="img/left.svg" alt="left">
+                    <span id="year"></span>
+                    <img id="next-year" src="img/right.svg" alt="right">
+                </div>
+            </div>
+
+            <div class="calendar">
+
+                <div class="months">
+                    <div class="month">STY</div>
+                    <div class="month">LUT</div>
+                    <div class="month">MAR</div>
+                    <div class="month">KWI</div>
+                    <div class="month">MAJ</div>
+                    <div class="month">CZE</div>
+                    <div class="month">LIP</div>
+                    <div class="month">SIE</div>
+                    <div class="month">WRZ</div>
+                    <div class="month">PAŹ</div>
+                    <div class="month">LIS</div>
+                    <div class="month">GRU</div>
+                </div>
+
+                <div class="days">
+                    <div class="day-names">
+                        <div class="day-name">PON</div>
+                        <div class="day-name">WT</div>
+                        <div class="day-name">ŚR</div>
+                        <div class="day-name">CZW</div>
+                        <div class="day-name">PT</div>
+                        <div class="day-name">SOB</div>
+                        <div class="day-name">ND</div>
+                    </div>
+
+                    <div class="days-grid">
+
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="myCard">
+                <img src="img/MyCard.svg" alt="Cinkowyy">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
