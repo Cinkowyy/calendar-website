@@ -11,3 +11,9 @@ Application allows you to save and edit the visits saved for a given day. Visits
 - Javascript
 
 ## Screenshots
+
+<img src="screenshots\calendar_main.png" style="zoom: 67%;"/>*Calendar View*
+<br />
+<br />
+<br />
+<img src="screenshots\calendar_edit.png" style="zoom: 67%;"/>*Add/edit View*
